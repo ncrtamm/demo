@@ -1,17 +1,18 @@
 <style>
 /* PreLoadMe - Usagilabs */
-#preloader{position:fixed;top:0;left:0;right:0;bottom:0;background-color:#7EC169;z-index:99}
+#preloader{position:fixed;top:0;left:0;right:0;bottom:0;background-color:#87a161;z-index:99}
 #status{width:130px;height:130px;position:absolute;left:50%;top:50%;margin:-100px 0 0 -100px;text-align:center}
 #status .loader-img{width:100%;margin-bottom:15px}
 #status b{margin:15px auto;display:block;font-family:'Roboto','Open Sans','Segoe UI',Arial,sans-serif;text-transform:uppercase;letter-spacing:2px;color:#FFF;text-align:center;}
-/* Default */
-@keyframes rotate{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(180deg);transform:rotate(180deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.ball-clip-rotate > div{background-color:#fff;width:15px;height:15px;border-radius:100%;margin:2px;-webkit-animation-fill-mode:both;animation-fill-mode:both;border:2px solid #fff;border-bottom-color:transparent;height:26px;width:26px;background:transparent!important;display:inline-block;-webkit-animation:rotate 0.75s 0s linear infinite;animation:rotate 0.75s 0s linear infinite}
+/* Ball Scale Multiple */
+#status .square-spin{margin:auto;width:55px;margin-top:20px}
+@-webkit-keyframes square-spin{25%{-webkit-transform:perspective(100px) rotateX(180deg) rotateY(0);transform:perspective(100px) rotateX(180deg) rotateY(0)}50%{-webkit-transform:perspective(100px) rotateX(180deg) rotateY(180deg);transform:perspective(100px) rotateX(180deg) rotateY(180deg)}75%{-webkit-transform:perspective(100px) rotateX(0) rotateY(180deg);transform:perspective(100px) rotateX(0) rotateY(180deg)}100%{-webkit-transform:perspective(100px) rotateX(0) rotateY(0);transform:perspective(100px) rotateX(0) rotateY(0)}}@keyframes square-spin{25%{-webkit-transform:perspective(100px) rotateX(180deg) rotateY(0);transform:perspective(100px) rotateX(180deg) rotateY(0)}50%{-webkit-transform:perspective(100px) rotateX(180deg) rotateY(180deg);transform:perspective(100px) rotateX(180deg) rotateY(180deg)}75%{-webkit-transform:perspective(100px) rotateX(0) rotateY(180deg);transform:perspective(100px) rotateX(0) rotateY(180deg)}100%{-webkit-transform:perspective(100px) rotateX(0) rotateY(0);transform:perspective(100px) rotateX(0) rotateY(0)}}.square-spin > div{-webkit-animation-fill-mode:both;animation-fill-mode:both;width:50px;height:50px;background:#fff;-webkit-animation:square-spin 3s 0s cubic-bezier(0.09,0.57,0.49,0.9) infinite;animation:square-spin 3s 0s cubic-bezier(0.09,0.57,0.49,0.9) infinite}
 </style>
 <div id='preloader'>
   <div id='status'>
-    <img class='loader-img' src='https://1.bp.blogspot.com/-nCAISkaZVtY/WNAMDVS7JWI/AAAAAAAAAnw/fVTmHs32Xhw-ODpTF7mc5ZJnpkVcGuZ5gCLcB/s1600/chibi_yoshino_by_kurama_chan.png'/>
+    <img class='loader-img' src='https://2.bp.blogspot.com/-ILQZOTTaVnE/WNAMC_o_V_I/AAAAAAAAAns/r_5Jc3d-nb0hawJutEiriaYPpCOVPj-wwCLcB/s230/nekopoi_pret.png'/>
     <b>Loading</b>
-    <div class='loader-inner ball-clip-rotate'><div></div></div>
+    <div class="loader-inner square-spin"><div></div></div>
   </div>
 </div>
 <div>
@@ -23,7 +24,5 @@ $('#preloader').delay(timing).fadeOut('slow');
 $('body').delay(timing).css({'overflow':'hidden'});
 });
 </script>
-  <body>
 HERE CONTENT
-  </body>
 </div>
